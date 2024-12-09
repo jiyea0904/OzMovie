@@ -8,7 +8,7 @@ export const fetchMovieDetails = createAsyncThunk(
 
         const response = await fetch(`${API_URL}/movie/${id}?api_key=${API_KEY}&language=ko-KR`);
         const data = await response.json();
-        return { ...data }; 
+        return data; 
     }
 );
 
