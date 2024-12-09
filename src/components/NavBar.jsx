@@ -3,7 +3,7 @@ import '../App.css';
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
+    <header className="navbar">
       <div className="navbar_logo">
         <Link to="/">🎥 OZ Movie</Link>
       </div>
@@ -14,7 +14,7 @@ const NavBar = () => {
         <button className="navbar_button">Login</button>
         <button className="navbar_button">Sign Up</button>
       </div>
-    </nav>
+    </header>
   );
 };
 
