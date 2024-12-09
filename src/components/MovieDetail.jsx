@@ -18,9 +18,6 @@ const MovieDetail = () => {
     if (loading) return <p>Loading movie details...</p>;
     if (error) return <p>Error: {error}</p>;
     if (!movie) return <p>Loading movie details...</p>;
-      
-    console.log("Movie details object:", movie);
-    console.log("Movie details state:", movieDetails);
     
     const posterUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
 

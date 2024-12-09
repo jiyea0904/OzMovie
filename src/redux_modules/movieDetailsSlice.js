@@ -8,8 +8,7 @@ export const fetchMovieDetails = createAsyncThunk(
 
         const response = await fetch(`${API_URL}/movie/${id}?api_key=${API_KEY}&language=ko-KR`);
         const data = await response.json();
-        console.log("API Response:", data); // 응답 데이터 확인
-        return { ...data, id }; // 응답 데이터에 id 추가
+        return { ...data }; 
     }
 );
 
@@ -34,7 +33,7 @@ const movieDetailsSlice = createSlice({
         })
         .addCase(fetchMovieDetails.rejected, (state, action) => {
           state.loading = false;
-          state.error = action.error.message;
+          state.error = action.payload;
         });
     },
   });
