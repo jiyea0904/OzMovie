@@ -29,7 +29,7 @@ const PopularMovies = () => {
                 navigation // 네비게이션 활성화
             >
                 {movies.map((movie, index) => (
-                    <SwiperSlide key={movie.id}>
+                    <SwiperSlide key={movie.id} >
                         <span className="movie-rank">{index + 1}</span>
                         <MovieCard
                             id={movie.id}

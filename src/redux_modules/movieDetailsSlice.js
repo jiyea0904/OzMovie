@@ -34,7 +34,7 @@ const movieDetailsSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder
-            // 기존 fetchMovieDetails 액션
+            // fetchMovieDetails
             .addCase(fetchMovieDetails.pending, (state) => {
                 state.loading = true;
                 state.error = null;
@@ -47,7 +47,7 @@ const movieDetailsSlice = createSlice({
                 state.loading = false;
                 state.error = action.error.message;
             })
-            // fetchMovieRecommendations 액션
+            // fetchMovieRecommendations
             .addCase(fetchMovieRecommendations.pending, (state) => {
                 state.recommendationsLoading = true;
                 state.error = null;

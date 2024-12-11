@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import '../App.css';
 import { useEffect, useState } from "react";
 import SearchForm from "./SearchForm";
@@ -10,6 +10,7 @@ const NavBar = () => {
   const [showSearchForm, setShowSearchForm] = useState(false);
   const location = useLocation(); // 현재 경로 가져오기
   const dispatch = useDispatch(); // Redux 디스패치
+  const navigate = useNavigate();
 
   // 경로 변경 감지하여 검색 폼 닫기 및 검색어 초기화
   useEffect(() => {
@@ -32,8 +33,8 @@ const NavBar = () => {
       >
         Search
       </button>
-        <button className="navbar_button">Login</button>
-        <button className="navbar_button">Sign Up</button>
+        <button className="navbar_button" onClick={() => navigate('/login')}>Login</button>
+        <button className="navbar_button" onClick={() => navigate('/signup')}>Sign Up</button>
       </div>
       {showSearchForm && <SearchForm />}
     </header>

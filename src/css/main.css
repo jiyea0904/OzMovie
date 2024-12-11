@@ -1,5 +1,5 @@
 .normal_movielist {
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -61,3 +61,8 @@
 
 
 
+@media screen and (max-width: 1280px ) {
+    .normal_movielist .movielist {
+        justify-content: center;
+    }
+}
