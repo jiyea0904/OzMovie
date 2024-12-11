@@ -1,0 +1,21 @@
+
+.moviecard_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.moviecard_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.moviecard_title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.moviecard_rating svg {
+    margin-right: 4px;
+}
