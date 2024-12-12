@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
-const API_KEY = import.meta.env.VITE_API_KEY; // 환경 변수에서 API 키 가져오기
-const API_URL = import.meta.env.VITE_API_URL; // 환경 변수에서 API URL 가져오기
+const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // 환경 변수에서 API 키 가져오기
+const API_URL = import.meta.env.VITE_TMDB_API_URL; // 환경 변수에서 API URL 가져오기
 
 // 상영 예정 영화 가져오기 Thunk
 export const fetchUpcomingMovies = createAsyncThunk(

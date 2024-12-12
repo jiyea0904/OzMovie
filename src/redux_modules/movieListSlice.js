@@ -3,8 +3,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const fetchMovieList = createAsyncThunk(
   "movies/fetchMovieList",
   async (page) => {
-      const API_KEY = import.meta.env.VITE_API_KEY;
-      const API_URL = import.meta.env.VITE_API_URL;
+      const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
+      const API_URL = import.meta.env.VITE_TMDB_API_URL;
 
       const response = await fetch(
         `${API_URL}/movie/top_rated?api_key=${API_KEY}&language=ko-KR&page=${page}`

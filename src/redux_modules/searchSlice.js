@@ -4,8 +4,8 @@ export const fetchMovies = createAsyncThunk(
   "search/fetchMovies",
   async (searchTerm) => {
 
-    const API_KEY = import.meta.env.VITE_API_KEY; // 환경 변수에서 API 키 가져오기
-    const API_URL = import.meta.env.VITE_API_URL; // 환경 변수에서 API URL 가져오기
+    const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // 환경 변수에서 API 키 가져오기
+    const API_URL = import.meta.env.VITE_TMDB_API_URL; // 환경 변수에서 API URL 가져오기
 
     const response = await fetch(
       `${API_URL}/search/movie?api_key=${API_KEY}&query=${searchTerm}`

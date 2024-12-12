@@ -3,8 +3,8 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const fetchPopularMovies = createAsyncThunk(
   'movies/fetchPopularMovies',
   async () => {
-    const API_KEY = import.meta.env.VITE_API_KEY; // 환경 변수에서 API 키 가져오기
-    const API_URL = import.meta.env.VITE_API_URL; // 환경 변수에서 API URL 가져오기
+    const API_KEY = import.meta.env.VITE_TMDB_API_KEY; // 환경 변수에서 API 키 가져오기
+    const API_URL = import.meta.env.VITE_TMDB_API_URL; // 환경 변수에서 API URL 가져오기
 
     // API 호출
     const response = await fetch(`${API_URL}/movie/popular?api_key=${API_KEY}&language=ko-KR`);

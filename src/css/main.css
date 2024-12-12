@@ -1,13 +1,14 @@
 .normal_movielist {
-    max-width: 1280px;
+    max-width: 1290px;
     margin: 0 auto;
     margin-top: 30px;
+    padding: 0 30px;
 }
 
 .normal_movielist .movielist {
     padding: 20px 0;
     display: flex;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 .normal_movielist .moviecard_wrap{
@@ -63,6 +64,46 @@
 
 @media screen and (max-width: 1280px ) {
     .normal_movielist .movielist {
-        justify-content: center;
+        gap: 20px;
+        padding: 0 30px;
     }
+
+    .normal_movielist .movielist li{
+        width: calc(25% - 20px);
+    }
+
+    .normal_movielist .movielist li .moviecard_wrap {
+        width: 100%;
+    }
+
+    .normal_movielist .movielist li .moviecard_wrap {
+        width: 100%;
+    }
+
+    .normal_movielist .moviecard_img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px ) {
+    .normal_movielist .moviecard_img {
+        height: 240px;
+    }
+
+}
+
+@media screen and (max-width: 780px ) {
+
+    .normal_movielist .movielist li{
+        width: calc(33% - 12px);
+    }
+
+}
+
+@media screen and (max-width: 580px ) {
+
+    .normal_movielist .movielist li{
+        width: calc(50% - 10px);
+    }
+
 }
